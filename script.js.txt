@@ -1,0 +1,17 @@
+let chosenNumber = Math.floor(Math.random() * 101)
+
+function Guess() {
+  let input = document.getElementById("Guess")
+  
+  let guess = input.value;
+  let Result = document.getElementById("Result");
+  if (guess > chosenNumber) {
+    Result.innerHTML = "Too high!";
+  } else if (guess < chosenNumber) {
+    Result.innerHTML = "Too low!";
+  } else {
+    Result.innerHTML = "Congrats! You won🥳";
+  }
+}
+
+document.getElementById("Button").addEventListener('click', Guess())
